@@ -7,11 +7,11 @@ function setup() {
 // Esta función se ejecuta repetidas veces indefinidamente.
 function draw() {
     if (mouseIsPressed === true) {
-        var color = axios.get('http://drawboardarsw.herokuapp.com/sessioncolor').then( color => {
+        var color = axios.get('https://drawboardarsw.herokuapp.com/sessioncolor').then( color => {
             fill(color.data.r, color.data.g ,color.data.b );
             ellipse(mouseX, mouseY, 20, 20);
             var point = [mouseX, mouseY, color.data.r, color.data.g ,color.data.b ];
-            axios.post('http://drawboardarsw.herokuapp.com/point', point);
+            axios.post('https://drawboardarsw.herokuapp.com/point', point);
         });
     }
     if (mouseIsPressed === false) {
@@ -20,7 +20,7 @@ function draw() {
 }
 
 function refresh(){
-    var points = axios.get('http://drawboardarsw.herokuapp.com/point').then(points => {
+    var points = axios.get('https://drawboardarsw.herokuapp.com/point').then(points => {
         clear();
         if (points.data != null) {
             for (var i = 0; i < points.data.length; i++) {
@@ -34,10 +34,10 @@ setInterval(refresh, 1000);
 
 function restart() {
     clear();
-    axios.post('http://drawboardarsw.herokuapp.com/restart');
+    axios.post('https://drawboardarsw.herokuapp.com/restart');
 }
 
 function registro() {
     var x = document.getElementById("inputText").value;
-    axios.get('http://drawboardarsw.herokuapp.com/setname?name=' + x);
+    axios.get('https://drawboardarsw.herokuapp.com/setname?name=' + x);
 }
