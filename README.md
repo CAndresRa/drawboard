@@ -24,10 +24,11 @@ Para el desarrollo del proyecto se utilizo
 * **Java** el codigo fue desarrollado con el lenguaje de programación.
 * **Spring** framework utilizado.
 * **Desarrollo web**: React y Js.
+* **P5Js**: Libreria que facilita el desarrollo del producto, otorgando metodos para la implementacion de objetos (figuras) que son utilizados en el proyecto. 
 
 Utilizar `mvn package` para la generacion del fichero .jar con los .class compilados.
 
-![Texto alternativo](https://github.com/CAndresRa/ARSW-QuintoLaboratorio/blob/master/ImgReadme/mvn%20package.png)
+![Texto alternativo](https://github.com/CAndresRa/drawboard/blob/master/imgReadme/mvn%20package.png)
 
 Una vez realizado el `mvn package` el codigo estara listo para ser utilizado bajo la siguiente estructura.
 
@@ -37,14 +38,21 @@ Debido a que es un proyecto que utiliza como framework **Spring**, la manera de 
 
 por ejemplo y dando como resultado:
 
-![Texto alternativo](https://github.com/CAndresRa/ARSW-QuintoLaboratorio/blob/master/ImgReadme/mvn%20spring.png)
-
+![Texto alternativo](https://github.com/CAndresRa/drawboard/blob/master/imgReadme/mvn%20spring.png)
 
 ## Diagrama
 
 * Aplicación 
 
-![Texto alternativo](https://github.com/CAndresRa/ARSW-QuintoLaboratorio/blob/master/ImgReadme/Diagrama.png)
+![Texto alternativo](https://github.com/CAndresRa/drawboard/blob/master/imgReadme/Diagrama.png)
+
+El diariama anteriormente expuesto muestra que existe una clase llamada **WebSiteController** que ademas de ser el controlador encargado de inicializar los componentes del framework **Spring** sera el controlador de las solicitudes que lleguen al servidor, mediante la libreria **P5Js** encontramos metodos que permiten crear eventos que generen llamados al servidor, el cual tendra como objetivo principal, generar las **sesiones** correspondientes con ayuda de un **Singleton** que se encuentra en la clase **SharedMemory** el cual guardara estructuras de datos con la informacion presente en el sitio web, el diseño dispone de dos entidades **User** y **Color** los cuales seran utilizados para obetener informacion de ellos para agregar requerimientos de distincion de sesiones.
+
+## Muestra del proyecto 
+
+![Texto alternativo](https://github.com/CAndresRa/drawboard/blob/master/imgReadme/Prototype.png)
+
+
 
 
 
